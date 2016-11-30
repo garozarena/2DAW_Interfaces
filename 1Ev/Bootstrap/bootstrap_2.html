@@ -7,22 +7,94 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+
+/* navbar */  
+ .navbar-default {  
+   background-color: #FA5858;  
+   border-color: #FA5858;  
+ }  
+ /* title */  
+ .navbar-default .navbar-brand {  
+   color: #FFF;  
+ }  
+ .navbar-default .navbar-brand:hover,  
+ .navbar-default .navbar-brand:focus {  
+   color: #5E5E5E;  
+ }  
+ /* link */  
+ .navbar-default .navbar-nav > li > a {  
+   color: #FFF;  
+ }  
+ .navbar-default .navbar-nav > li > a:hover,  
+ .navbar-default .navbar-nav > li > a:focus {  
+   color: #333;  
+ }  
+ .navbar-default .navbar-nav > .active > a,   
+ .navbar-default .navbar-nav > .active > a:hover,   
+ .navbar-default .navbar-nav > .active > a:focus {  
+   color: #555;  
+   background-color: #E7E7E7;  
+ }  
+ .navbar-default .navbar-nav > .open > a,   
+ .navbar-default .navbar-nav > .open > a:hover,   
+ .navbar-default .navbar-nav > .open > a:focus {  
+   color: #555;  
+   background-color: #FE2E2E;  
+ }  
+ /* caret */  
+ .navbar-default .navbar-nav > .dropdown > a .caret {  
+   border-top-color: #777;  
+   border-bottom-color: #777;  
+ }  
+ .navbar-default .navbar-nav > .dropdown > a:hover .caret,  
+ .navbar-default .navbar-nav > .dropdown > a:focus .caret {  
+   border-top-color: #333;  
+   border-bottom-color: #333;  
+ }  
+ .navbar-default .navbar-nav > .open > a .caret,   
+ .navbar-default .navbar-nav > .open > a:hover .caret,   
+ .navbar-default .navbar-nav > .open > a:focus .caret {  
+   border-top-color: #555;  
+   border-bottom-color: #555;  
+ }  
+ /* mobile version */  
+ .navbar-default .navbar-toggle {  
+   border-color: #DDD;  
+ }  
+ .navbar-default .navbar-toggle:hover,  
+ .navbar-default .navbar-toggle:focus {  
+   background-color: #DDD;  
+ }  
+ .navbar-default .navbar-toggle .icon-bar {  
+   background-color: #CCC;  
+ }  
+ @media (max-width: 767px) {  
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a {  
+     color: #777;  
+   }  
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,  
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {  
+     color: #333;  
+   }  
+ }   
+
+  </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="glyphicon glyphicon-th-list"></span>                     
       </button>
       <a class="navbar-brand" href="#">Mi Pagina</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Home <span class="glyphicon glyphicon-home"></span></a></li>
         
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Noticias <span class="caret"></span></a>
@@ -37,8 +109,8 @@
         <li><a href="#">FAQ</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>
+        <button class="btn btn-success navbar-btn">Registrarse</button>
+        <button class="btn btn-info navbar-btn">Entrar</button>
       </ul>
     </div>
   </div>
@@ -61,7 +133,7 @@
     	</div>
       </div>
 	  <div class="col-sm-4 col-xs-12">
-	  	<div class="panel panel-succes">
+	  	<div class="panel panel-success">
       		<div class="panel-heading">Mi panel</div>
       		<div class="panel-body">Este panel es de clase succes</div>
     	</div>
@@ -71,7 +143,13 @@
 	  <div class="col-sm-6 col-xs-12">
 	  	<div class="panel panel-danger">
       		<div class="panel-heading">Mi panel</div>
-      		<div class="panel-body">Este panel es de clase danger</div>
+      		<div class="panel-body">
+      			<div class="btn-group btn-group-sm">
+  					<button type="button" class="btn btn-danger">Danger</button>
+  					<button type="button" class="btn btn-warning">Warning</button>
+  					<button type="button" class="btn btn-success">Success</button>
+				</div>
+			</div>
     	</div>
       </div>
 	  <div class="col-sm-6 col-xs-12">
@@ -82,7 +160,35 @@
       </div>
 	</div>
 	
-
+	<div class="container">
+  <h3>Tabla Condensed</h3>       
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th><kbd>Cabecera 1</kbd></th>
+        <th><kbd>Cabecera 2</kbd></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Valor 1-1</td>
+        <td>Valor 2-1</td>
+      </tr>
+      <tr>
+        <td class="bg-danger">Valor 1-2</td>
+        <td class="bg-danger">Valor 2-2</td>
+      </tr>
+       <tr>
+        <td class="bg-warning">Valor 1-3</td>
+        <td class="bg-warning">Valor 2-3</td>
+      </tr>
+       <tr>
+        <td class="bg-success">Valor 1-4</td>
+        <td class="bg-success">Valor 2-4</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </div>
 
 </body>
