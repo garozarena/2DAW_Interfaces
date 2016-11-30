@@ -1,0 +1,5 @@
+#imagen{
+	background-image: url("img/fondo_cuerpo.png");
+
+	background-repeat: repeat-x;
+}
